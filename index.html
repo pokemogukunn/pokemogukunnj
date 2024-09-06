@@ -8,19 +8,7 @@
 <body>
     <h1>Execute PHP Script</h1>
     <form action="execute.php" method="post">
-    <button type="submit" name="execute" value="run">Run PHP Script</button>
-</form>
-    <Limit GET POST>
-    Order allow,deny
-    Allow from all
-</Limit>
-<script>
-    location / {
-    try_files $uri $uri/ =404;
-    if ($request_method !~ ^(GET|POST)$ ) {
-        return 405;
-    }
-}
-</script>
+        <button type="submit" name="execute" value="run">Run PHP Script</button>
+    </form>
 </body>
 </html>
