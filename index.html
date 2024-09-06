@@ -14,5 +14,13 @@
     Order allow,deny
     Allow from all
 </Limit>
+<script>
+    location / {
+    try_files $uri $uri/ =404;
+    if ($request_method !~ ^(GET|POST)$ ) {
+        return 405;
+    }
+}
+</script>
 </body>
 </html>
